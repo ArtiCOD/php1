@@ -1,5 +1,6 @@
 <?php
 require_once 'model/userprovider.php';
+$pdo = require 'db.php';
 
 $error = null;
 if (isset($_GET['action']) && $_GET['action'] === 'logout') {
@@ -8,7 +9,6 @@ if (isset($_GET['action']) && $_GET['action'] === 'logout') {
 }
 if (isset($_POST['username'], $_POST['password'])) {
     ['username' => $username, 'password' => $password] = $_POST;
-
     $userProvider = new UserProvider();
     $user = $userProvider->getByUsernameAndPassword($username, $password);
 
