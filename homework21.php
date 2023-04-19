@@ -2,6 +2,9 @@
 //Задание 1
 $userAnswer = (int)readline("В каком году была создана ЧВК РЁДАН?\n Выберите один из трёх вариантов
  2022 2023 2021");
+$drivers = PDO::getAvailableDrivers();
+var_dump($drivers);
+
 
 while ($userAnswer != 2021 || $userAnswer != 2022 || $userAnswer != 2023) {
     $userAnswer = (int)readline("В каком году была создана ЧВК РЁДАН?\n Выберите один из трёх вариантов
